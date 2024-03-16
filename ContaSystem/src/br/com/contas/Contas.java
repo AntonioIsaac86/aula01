@@ -1,9 +1,11 @@
 package br.com.contas;
 
+import java.util.Random;
+
 public class Contas {
 
-	int numero;
-	double saldo;
+	private int numero;
+	private double saldo;
 	
 	//Criando construtores
 	public Contas() {
@@ -19,8 +21,14 @@ public class Contas {
 		this.saldo = 1;
 		System.out.println("Seu saldo inicial é: " + this.saldo + " " + "O número de sua conta é: " + this.numero);
 	}
+	public Contas(double valDeposito) {
+		depositar(valDeposito);
+		Random random = new Random();
+		this.numero = random.nextInt();
+		
+	}
 	
-	boolean sacar(double val) {
+	public boolean sacar(double val) {
 		if (this.saldo >= val) {
 			this.saldo = this.saldo - val;
 			return true;
@@ -30,7 +38,7 @@ public class Contas {
 			return false;
 		}
 	}
-	boolean depositar(double val) {
+	public boolean depositar(double val) {
 		if (val < 0) {
 			return false;
 		}
@@ -41,9 +49,18 @@ public class Contas {
 
 		}
 	}
-	double getSaldo () {
-		return this.saldo;
-		
+	public int getNumero() {
+		return numero;
 	}
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	public double getSaldo() {
+		return saldo;
+	}
+	public void setSaldo(double novoSaldo) {
+		this.saldo = novoSaldo;
+	}
+	
 
 }
