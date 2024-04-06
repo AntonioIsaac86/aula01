@@ -24,6 +24,32 @@ public class Cliente extends Pessoas {
 		this.profissao = profissao;
 	}
 	
+	public void cadastrar() {
+		
+	}
+
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+
+	public Profissao getProfissao() {
+		return profissao;
+	}
+
+
+	public void setProfissao(Profissao profissao) {
+		this.profissao = profissao;
+	}
+	
+	
+	
 	
 	
 	

@@ -7,6 +7,7 @@ public class Endereco {
     private String cidade;
     private String estado;
     private String pais;
+    
 	public String getRua() {
 		return rua;
 	}
@@ -43,6 +44,18 @@ public class Endereco {
 	public void setPais(String pais) {
 		this.pais = pais;
 	}
+	
+	public Endereco(String rua, String numero, String cep, String cidade, String estado, String pais) {
+		super();
+		this.rua = rua;
+		this.numero = numero;
+		this.cep = cep;
+		this.cidade = cidade;
+		this.estado = estado;
+		this.pais = pais;
+	}
+	
+	
     
     
 
