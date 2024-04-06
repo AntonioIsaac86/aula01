@@ -1,21 +1,41 @@
 package br.com.people;
 
+import java.time.LocalDate;
+import java.time.Period;
+
+import br.com.composicoes.Endereco;
+import br.com.composicoes.Telefones;
+
 public class Pessoas {
 	
 	private String nome;
-	private String dataNascimento;
-	private String endereco;
-	private String telsContato;
+	private LocalDate dataNascimento;
+	private Endereco endereco;
+	private Telefones telsContato;
 	
 	public Pessoas() {
-		
+		System.out.println("Criando uma pessoa sem atributos");
 	}
 	
-	public Pessoas(String nome, String dataNascimento, String endereco, String telsContato) {
-		this.nome =nome;
+	public Pessoas(String nome, LocalDate dataNascimento, Endereco endereco, Telefones telsContato) {
+		super();
+		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.endereco = endereco;
 		this.telsContato = telsContato;
+	}
+
+	public void cadastar() {
+		
+	}
+	
+	public int obterIdade() {
+		int idade = 0;
+		LocalDate dataAtual = LocalDate.now();
+		Period periodo = Period.between(this.dataNascimento, dataAtual);
+		idade = periodo.getYears();
+		return idade;
+				
 	}
 
 	public String getNome() {
@@ -26,30 +46,32 @@ public class Pessoas {
 		this.nome = nome;
 	}
 
-	public String getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(String dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
-	public String getEndereco() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
 
-	public void setEndereco(String endereco) {
+	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
 
-	public String getTelsContato() {
+	public Telefones getTelsContato() {
 		return telsContato;
 	}
 
-	public void setTelsContato(String telsContato) {
+	public void setTelsContato(Telefones telsContato) {
 		this.telsContato = telsContato;
 	}
 	
+	
+		
 	
 
 }
