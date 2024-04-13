@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import br.com.composicoes.Endereco;
 import br.com.composicoes.Profissao;
 import br.com.composicoes.Telefones;
+import br.com.estruturadedados.ListaDeTelefonesNaoOrdenados;
 
 public class Cliente extends Pessoas {
 	
@@ -17,7 +18,7 @@ public class Cliente extends Pessoas {
 	}
 
 
-	public Cliente(String nome, LocalDate dataNascimento, Endereco endereco, Telefones telsContato) {
+	public Cliente(String nome, LocalDate dataNascimento, Endereco endereco, ListaDeTelefonesNaoOrdenados telsContato) {
 		super(nome, dataNascimento, endereco, telsContato);
 		// TODO Auto-generated constructor stub
 		this.codigo = codigo;

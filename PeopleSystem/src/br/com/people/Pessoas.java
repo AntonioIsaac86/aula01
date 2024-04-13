@@ -5,19 +5,20 @@ import java.time.Period;
 
 import br.com.composicoes.Endereco;
 import br.com.composicoes.Telefones;
+import br.com.estruturadedados.ListaDeTelefonesNaoOrdenados;
 
 public class Pessoas {
 	
 	private String nome;
 	private LocalDate dataNascimento;
 	private Endereco endereco;
-	private Telefones telsContato;
+	private ListaDeTelefonesNaoOrdenados telsContato;
 	
 	public Pessoas() {
 		System.out.println("Criando uma pessoa sem atributos");
 	}
 	
-	public Pessoas(String nome, LocalDate dataNascimento, Endereco endereco, Telefones telsContato) {
+	public Pessoas(String nome, LocalDate dataNascimento, Endereco endereco, ListaDeTelefonesNaoOrdenados telsContato) {
 		super();
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
@@ -62,11 +63,11 @@ public class Pessoas {
 		this.endereco = endereco;
 	}
 
-	public Telefones getTelsContato() {
+	public ListaDeTelefonesNaoOrdenados getTelsContato() {
 		return telsContato;
 	}
 
-	public void setTelsContato(Telefones telsContato) {
+	public void setTelsContato(ListaDeTelefonesNaoOrdenados telsContato) {
 		this.telsContato = telsContato;
 	}
 	

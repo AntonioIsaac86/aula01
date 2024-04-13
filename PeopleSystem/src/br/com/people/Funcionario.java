@@ -6,6 +6,7 @@ import br.com.composicoes.Cargo;
 import br.com.composicoes.Endereco;
 import br.com.composicoes.Profissao;
 import br.com.composicoes.Telefones;
+import br.com.estruturadedados.ListaDeTelefonesNaoOrdenados;
 
 public class Funcionario extends Pessoas {
 	
@@ -19,7 +20,7 @@ public class Funcionario extends Pessoas {
 	}
 
 	
-		public Funcionario(String nome, LocalDate dataNascimento, Endereco endereco, Telefones telsContato, int matricula,
+		public Funcionario(String nome, LocalDate dataNascimento, Endereco endereco, ListaDeTelefonesNaoOrdenados telsContato, int matricula,
 			double salario, LocalDate dataAdmissao, Cargo cargo) {
 		super(nome, dataNascimento, endereco, telsContato);
 		this.matricula = matricula;

@@ -17,6 +17,10 @@ public class Telefones {
 	public void setNumTelefone(String numTelefone) {
 		this.numTelefone = numTelefone;
 	}
+	@Override
+	public String toString() {
+		return "Telefones [DDD=" + ddd + ", numero do Telefone=" + numTelefone + "]";
+	}
 	
 
 }
